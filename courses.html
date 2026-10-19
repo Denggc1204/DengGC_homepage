@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>授课 - 个人学术主页</title>
+    <style>
+        body { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; margin: 0; padding: 0; background: #f0f2f5; color: #333; }
+        nav { background: #2c3e50; padding: 16px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        nav a { color: white; margin: 0 18px; text-decoration: none; font-size: 16px; padding: 9px 18px; border-radius: 4px; transition: background 0.2s; }
+        nav a:hover { background: #34495e; }
+        nav a.active { background: #3498db; }
+
+        .container { max-width: 920px; margin: 40px auto; background: white; padding: 44px 50px; border-radius: 10px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 12px; font-size: 28px; margin-bottom: 30px; }
+
+        /* 课程分类标题 */
+        .section-title { font-size: 22px; color: #fff; background: linear-gradient(135deg, #3498db, #2c3e50); padding: 12px 20px; border-radius: 6px; margin: 40px 0 24px; font-weight: 600; }
+        .section-title:first-of-type { margin-top: 10px; }
+
+        /* 单门课程卡片 */
+        .course { margin-bottom: 36px; padding: 28px 30px; border: 1px solid #e8eaed; border-radius: 10px; background: #fafbfc; }
+        .course h3 { color: #1a5276; font-size: 20px; margin: 0 0 6px; }
+        .course .course-meta { color: #888; font-size: 14px; margin-bottom: 20px; }
+
+        .toc-label { font-size: 16px; color: #2c3e50; font-weight: bold; margin: 18px 0 12px; }
+
+        /* 章节列表 */
+        .chapter-list { list-style: none; margin: 0; padding: 0; }
+        .chapter-list > li { font-size: 16px; line-height: 1.9; color: #444; padding: 10px 12px; border-bottom: 1px dashed #eee; }
+        .chapter-list > li:last-child { border-bottom: none; }
+        .chapter-list > li:nth-child(odd) { background: #fff; }
+
+        /* PPT 下载行 */
+        .ppt-row { margin-top: 8px; padding-left: 8px; }
+        .ppt-row a { display: inline-flex; align-items: center; margin: 4px 10px 4px 0; padding: 6px 16px; background: #8e44ad; color: white; text-decoration: none; border-radius: 20px; font-size: 13.5px; transition: background 0.2s, transform 0.15s; }
+        .ppt-row a:hover { background: #732d91; transform: translateY(-1px); }
+        .ppt-row a.updating { background: #bdc3c7; cursor: default; }
+        .ppt-row a.updating:hover { background: #bdc3c7; transform: none; }
+
+        .footer-stat { text-align: center; color: #888; font-size: 14px; margin-top: 30px; padding-bottom: 24px; }
+    </style>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="publications.html">学术成果</a>
+        <a href="courses.html" class="active">授课</a>
+        <a href="books.html">著作</a>
+    </nav>
+
+    <div class="container">
+        <h1>授课</h1>
+
+        <!-- ============ 本科生课程 ============ -->
+        <div class="section-title">🎓 本科生课程</div>
+
+        <div class="course">
+            <h3>中级宏观经济学</h3>
+            <div class="course-meta">层次：本科 | 学时：待补充 | 学分：待补充</div>
+            <div class="toc-label">课程大纲</div>
+            <ul class="chapter-list">
+                <li>第一章：宏观经济学的微观基础
+                    <div class="ppt-row"><a href="files/courses/ug_intermacro/ch1.pptx" target="_blank">📊 第一章 PPT</a></div>
+                </li>
+                <li>第二章：跨期选择与市场均衡
+                    <div class="ppt-row"><a href="files/courses/ug_intermacro/ch2.pptx" target="_blank">📊 第二章 PPT</a></div>
+                </li>
+                <li>第三章：无限期模型与动态分析
+                    <div class="ppt-row"><a href="files/courses/ug_intermacro/ch3.pptx" target="_blank">📊 第三章 PPT</a></div>
+                </li>
+                <li>第四章：内生增长理论
+                    <div class="ppt-row"><a href="files/courses/ug_intermacro/ch4.pptx" target="_blank">📊 第四章 PPT</a></div>
+                </li>
+                <li>第五章：真实经济周期理论
+                    <div class="ppt-row"><a href="files/courses/ug_intermacro/ch5.pptx" target="_blank">📊 第五章 PPT</a></div>
+                </li>
+                <li>第六章：新凯恩斯主义模型
+                    <div class="ppt-row"><a href="files/courses/ug_intermacro/ch6.pptx" target="_blank">📊 第六章 PPT</a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="course">
+            <h3>金融时间序列分析</h3>
+            <div class="course-meta">层次：本科 | 学时：待补充 | 学分：待补充</div>
+            <div class="toc-label">课程大纲</div>
+            <ul class="chapter-list">
+                <li>第一章：金融时间序列基础
+                    <div class="ppt-row"><a href="files/courses/ug_fints/ch1.pptx" target="_blank">📊 第一章 PPT</a></div>
+                </li>
+                <li>第二章：平稳性与单位根检验
+                    <div class="ppt-row"><a href="files/courses/ug_fints/ch2.pptx" target="_blank">📊 第二章 PPT</a></div>
+                </li>
+                <li>第三章：ARMA 模型
+                    <div class="ppt-row"><a href="files/courses/ug_fints/ch3.pptx" target="_blank">📊 第三章 PPT</a></div>
+                </li>
+                <li>第四章：ARIMA 与季节模型
+                    <div class="ppt-row"><a href="files/courses/ug_fints/ch4.pptx" target="_blank">📊 第四章 PPT</a></div>
+                </li>
+                <li>第五章：波动率建模（ARCH/GARCH）
+                    <div class="ppt-row"><a href="files/courses/ug_fints/ch5.pptx" target="_blank">📊 第五章 PPT</a></div>
+                </li>
+                <li>第六章：协整与误差修正模型
+                    <div class="ppt-row"><a href="files/courses/ug_fints/ch6.pptx" target="_blank">📊 第六章 PPT</a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="course">
+            <h3>国家金融政策组合</h3>
+            <div class="course-meta">层次：本科 | 学时：待补充 | 学分：待补充</div>
+            <div class="toc-label">课程大纲</div>
+            <ul class="chapter-list">
+                <li>第一章：货币概述
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch1.pptx" target="_blank">📊 第一章 PPT</a></div>
+                </li>
+                <li>第二章：货币需求
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch2.pptx" target="_blank">📊 第二章 PPT</a></div>
+                </li>
+                <li>第三章：货币供给
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch3.pptx" target="_blank">📊 第三章 PPT</a></div>
+                </li>
+                <li>第四章：发达国家的货币政策目标与工具
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch4.pptx" target="_blank">📊 第四章 PPT</a></div>
+                </li>
+                <li>第五章：货币政策传导渠道
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch5.pptx" target="_blank">📊 第五章 PPT</a></div>
+                </li>
+                <li>第六章：货币政策的制度与效果
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch6.pptx" target="_blank">📊 第六章 PPT</a></div>
+                </li>
+                <li>第七章：数字货币与货币政策
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch7.pptx" target="_blank">📊 第七章 PPT</a></div>
+                </li>
+                <li>第八章：开放经济条件下的货币政策
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch8.pptx" target="_blank">📊 第八章 PPT</a></div>
+                </li>
+                <li>第九章：财政与财政概述
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch9.pptx" target="_blank">📊 第九章 PPT</a></div>
+                </li>
+                <li>第十章：财政政策理论与财政政策类型
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch10.pptx" target="_blank">📊 第十章 PPT</a></div>
+                </li>
+                <li>第十一章：财政政策的作用机制
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch11.pptx" target="_blank">📊 第十一章 PPT</a></div>
+                </li>
+                <li>第十二章：货币政策与财政政策
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch12.pptx" target="_blank">📊 第十二章 PPT</a></div>
+                </li>
+                <li>第十三章：货币政策与财政政策的协调
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch13.pptx" target="_blank">📊 第十三章 PPT</a></div>
+                </li>
+                <li>第十四章：货币政策与财政政策在中国的实践
+                    <div class="ppt-row"><a href="files/courses/ug_finpolicy/ch14.pptx" target="_blank">📊 第十四章 PPT</a></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ============ 研究生课程 ============ -->
+        <div class="section-title">🎓 研究生课程</div>
+
+        <div class="course">
+            <h3>宏观经济学</h3>
+            <div class="course-meta">层次：研究生 | 学时：待补充 | 学分：待补充</div>
+            <div class="toc-label">课程大纲</div>
+            <ul class="chapter-list">
+                <li>第一章：宏观经济学的微观基础
+                    <div class="ppt-row"><a href="files/courses/g_macro/ch1.pptx" target="_blank">📊 第一章 PPT</a></div>
+                </li>
+                <li>第二章：动态规划与最优控制
+                    <div class="ppt-row"><a href="files/courses/g_macro/ch2.pptx" target="_blank">📊 第二章 PPT</a></div>
+                </li>
+                <li>第三章：经济增长理论
+                    <div class="ppt-row"><a href="files/courses/g_macro/ch3.pptx" target="_blank">📊 第三章 PPT</a></div>
+                </li>
+                <li>第四章：真实经济周期理论
+                    <div class="ppt-row"><a href="files/courses/g_macro/ch4.pptx" target="_blank">📊 第四章 PPT</a></div>
+                </li>
+                <li>第五章：新凯恩斯主义模型
+                    <div class="ppt-row"><a href="files/courses/g_macro/ch5.pptx" target="_blank">📊 第五章 PPT</a></div>
+                </li>
+                <li>第六章：开放经济宏观经济学
+                    <div class="ppt-row"><a href="files/courses/g_macro/ch6.pptx" target="_blank">📊 第六章 PPT</a></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="course">
+            <h3>高级宏观经济学 2</h3>
+            <div class="course-meta">层次：研究生 | 学时：待补充 | 学分：待补充</div>
+            <div class="toc-label">课程大纲</div>
+            <ul class="chapter-list">
+                <li>第一章：DSGE 模型基础
+                    <div class="ppt-row"><a href="files/courses/g_advmacro2/ch1.pptx" target="_blank">📊 第一章 PPT</a></div>
+                </li>
+                <li>第二章：家庭与厂商行为
+                    <div class="ppt-row"><a href="files/courses/g_advmacro2/ch2.pptx" target="_blank">📊 第二章 PPT</a></div>
+                </li>
+                <li>第三章：市场均衡与福利分析
+                    <div class="ppt-row"><a href="files/courses/g_advmacro2/ch3.pptx" target="_blank">📊 第三章 PPT</a></div>
+                </li>
+                <li>第四章：货币政策与价格黏性
+                    <div class="ppt-row"><a href="files/courses/g_advmacro2/ch4.pptx" target="_blank">📊 第四章 PPT</a></div>
+                </li>
+                <li>第五章：财政政策的动态效应
+                    <div class="ppt-row"><a href="files/courses/g_advmacro2/ch5.pptx" target="_blank">📊 第五章 PPT</a></div>
+                </li>
+                <li>第六章：开放经济 DSGE 模型
+                    <div class="ppt-row"><a href="files/courses/g_advmacro2/ch6.pptx" target="_blank">📊 第六章 PPT</a></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-stat">
+        <span>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span>本页阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
+    </div>
+</body>
+</html>
