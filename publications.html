@@ -5,20 +5,32 @@
     <title>学术成果 - 个人学术主页</title>
     <style>
         body { font-family: "Microsoft YaHei", Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        nav { background: #2c3e50; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-size: 16px; padding: 8px 15px; border-radius: 4px; }
+        
+        /* 导航栏优化：悬浮置顶 */
+        nav { background: #2c3e50; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; margin: 0 20px; text-decoration: none; font-size: 16px; padding: 8px 15px; border-radius: 4px; transition: background 0.3s; }
         nav a:hover { background: #34495e; }
         nav a.active { background: #3498db; }
-        .container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .paper { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
-        .paper h3 { color: #333; margin-bottom: 5px; }
-        .paper .authors { color: #666; margin-bottom: 5px; }
-        .paper .venue { color: #888; font-style: italic; margin-bottom: 10px; }
-        .paper a { display: inline-block; margin-right: 10px; padding: 5px 12px; background: #3498db; color: white; text-decoration: none; border-radius: 3px; font-size: 14px; }
-        .paper a:hover { background: #2980b9; }
+        
+        /* 容器优化 */
+        .container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 30px; }
+        
+        /* 论文条目优化：增加留白与分隔 */
+        .paper { margin-bottom: 35px; padding-bottom: 25px; border-bottom: 1px dashed #ddd; }
+        .paper:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .paper h3 { color: #2c3e50; margin-bottom: 10px; font-size: 18px; font-weight: 600; }
+        .paper .authors { color: #555; margin-bottom: 6px; font-size: 15px; }
+        .paper .venue { color: #888; font-style: italic; margin-bottom: 15px; font-size: 15px; }
+        
+        /* 按钮优化：圆角胶囊形 */
+        .paper a { display: inline-flex; align-items: center; margin-right: 12px; padding: 6px 16px; background: #3498db; color: white; text-decoration: none; border-radius: 20px; font-size: 14px; transition: transform 0.2s, background 0.3s; }
+        .paper a:hover { background: #2980b9; transform: translateY(-2px); }
         .paper a.code { background: #27ae60; }
         .paper a.code:hover { background: #219653; }
+        
+        /* 统计与底部 */
+        .stats { text-align: center; color: #666; font-size: 14px; margin-top: 20px; padding-bottom: 20px; }
     </style>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
@@ -28,11 +40,12 @@
         <a href="publications.html" class="active">学术成果</a>
         <a href="books.html">著作</a>
     </nav>
+    
     <div class="container">
         <h1>学术成果</h1>
 
         <div class="paper">
-            <h3> 货币国际化、定价货币变动与经济波动</h3>
+            <h3>货币国际化、定价货币变动与经济波动</h3>
             <div class="authors">邓贵川, 彭红枫</div>
             <div class="venue">世界经济, 2019（6）</div>
             <a href="files/papers/Deng_and_Peng_2019/Deng_and_Peng_2019.pdf" target="_blank">📄 论文 PDF</a>
@@ -40,7 +53,7 @@
         </div>
 
         <div class="paper">
-            <h3> 支付时滞、汇率传递与宏观经济波动</h3>
+            <h3>支付时滞、汇率传递与宏观经济波动</h3>
             <div class="authors">邓贵川, 谢丹阳</div>
             <div class="venue">经济研究, 2020（2）</div>
             <a href="files/papers/Deng_and_Xie_2020/Deng_and_Xie_2020.pdf" target="_blank">📄 论文 PDF</a>
@@ -48,7 +61,7 @@
         </div>
 
         <div class="paper">
-            <h3> 利率平价偏离、资本账户开放与经济波动——基于小国DSGE模型的分析</h3>
+            <h3>利率平价偏离、资本账户开放与经济波动——基于小国DSGE模型的分析</h3>
             <div class="authors">彭红枫, 邓贵川</div>
             <div class="venue">管理科学学报, 2020（8）</div>
             <a href="files/papers/Peng_and_Deng_2020/Peng_and_Deng_2020.pdf" target="_blank">📄 论文 PDF</a>
@@ -56,7 +69,7 @@
         </div>
     </div>
 
-    <div style="text-align: center; color: #666; font-size: 14px; margin-top: 20px; padding-bottom: 20px;">
+    <div class="stats">
         <span>本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <span>本页阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>
